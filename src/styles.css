@@ -1,0 +1,8 @@
+h1,
+footer {
+  text-align: center;
+}
+#bodyContainer {
+  display: block;
+  margin: 20px auto;
+}
