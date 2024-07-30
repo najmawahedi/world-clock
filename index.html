@@ -1,44 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Lobster&family=Oleo+Script:wght@400;700&family=Pridi:wght@200;300;400;500;600;700&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.45/moment-timezone-with-data-1970-2030.min.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>World Clock</title>
     <link rel="stylesheet" href="src/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Oleo+Script:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <h1>World Clock</h1>
     <div id="bodyContainer">
       <select id="cities">
-        <option value="">Choose a city</option>
+        <option value="">Select a city</option>
         <option value="newYork">New York</option>
         <option value="berlin">Berlin</option>
         <option value="kabul">Kabul</option>
         <option value="seoul">Seoul</option>
       </select>
 
-      <div>
-        <h2>New York</h2>
-        <div>Agust 21st 2024</div>
-        <div>6:50 PM</div>
+      <div id="firstcity">
+        <h2>
+          New York
+          <div class="date">Agust 21st 2024</div>
+        </h2>
+
+        <div class="clock">6:50 <span class="am">PM</span></div>
       </div>
-      <div>
-        <h2>Berlin</h2>
-        <div>Agust 21st 2024</div>
-        <div>8:50 PM</div>
+      <div id="secondcity">
+        <h2>
+          Berlin
+          <div class="date">Agust 21st 2024</div>
+        </h2>
+
+        <div class="clock">8:50 <span class="am">PM</span></div>
       </div>
-      <div>
-        <h2>Seoul</h2>
-        <div>Agust 21st 2024</div>
-        <div>10:05 PM</div>
+      <div id="thirdcity">
+        <h2>
+          Seoul
+          <div class="date">Agust 21st 2024</div>
+        </h2>
+
+        <div class="clock">10:05 <span class="am">PM</span></div>
       </div>
     </div>
     <footer>
       This project is coded by
-      <a href="https://github.com/najmawahedi">Najma Wahedi</a> and is open
-      sourced on <a href="#">GitHub</a> and hosted on
+      <strong><a href="https://github.com/najmawahedi">Najma Wahedi</a></strong>
+      and is open sourced on <a href="#">GitHub</a> and hosted on
       <a href="https://worldclockprojectnajma.netlify.app/">Netlify</a>
     </footer>
     <script src="src/index.js"></script>

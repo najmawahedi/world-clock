@@ -1,8 +1,73 @@
 h1,
 footer {
   text-align: center;
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  opacity: 80%;
 }
 #bodyContainer {
   display: block;
   margin: 20px auto;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.658);
+  width: 550px;
+  padding: 40px 0;
+  border-radius: 6px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+body {
+  background-image: url("bestclock.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+.clock {
+  padding-top: 25px;
+  font-size: 30px;
+  line-height: 1;
+  font-weight: bolder;
+}
+h1,
+h2 {
+  font-family: "Vollkorn", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  margin-bottom: 10px;
+}
+.am {
+  vertical-align: baseline;
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+#cities {
+  font-size: 15px;
+  padding: 10px 15px;
+  border-radius: 6px;
+  color: rgba(0, 0, 0, 0.726);
+  font-family: sans-serif;
+  font-weight: 400;
+  margin-bottom: 10px;
+  text-align: left;
+  width: 500px;
+}
+h2 {
+  text-align: left;
+}
+#firstcity,
+#secondcity,
+#thirdcity {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+.date {
+  text-align: left;
+  font-size: 12px;
+  opacity: 70%;
+  font-weight: normal;
 }
