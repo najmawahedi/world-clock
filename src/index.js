@@ -36,3 +36,41 @@ function settingintervalSoul() {
 }
 
 setInterval(settingintervalSoul, 1000);
+
+function updatetime(event) {
+  let selectedcity;
+
+  if (event) {
+    selectedcity = event.target.value;
+  } else {
+    selectedcity = document.querySelector("#cities").value;
+  }
+
+  // Ensure the selected city is valid before updating the time
+  if (selectedcity && selectedcity !== "Select a city") {
+    let cityname = selectedcity.replace("_", " ").split("/")[1];
+    let citytime = moment.tz(selectedcity);
+    let cityelement = document.querySelector("#innerhtml");
+    cityelement.innerHTML = `<div id="firstcity">
+          <h2>
+            ${cityname}
+            <div id="newYork" class="date">${citytime.format(
+              "MMMM Do YYYY"
+            )}</div>
+          </h2>
+
+          <div class="clock">
+            <span id="citytime">${citytime.format("h:mm:ss")}</span>
+            <span id="amnewYorktime" class="am">${citytime.format("A")}</span>
+          </div>
+        </div>`;
+  }
+}
+
+let cityselectelement = document.querySelector("#cities");
+cityselectelement.addEventListener("change", updatetime);
+
+// Update the time every second only if a valid city is selected
+setInterval(() => {
+  updatetime();
+}, 1000);
