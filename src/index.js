@@ -23,19 +23,16 @@ function updateClock(timezone, userTimezone) {
   document.getElementById("displayTime").textContent = now.format("h:mm:ss");
   document.getElementById("displayAMPM").textContent = now.format("A");
 
-  // Apply styles to the selected city container
   let currentTimeContainer = document.getElementById("currentTime");
 
-  // Only apply styles if the selected timezone is not the user's default location
   if (timezone !== userTimezone) {
-    currentTimeContainer.style.backgroundColor = "#f0f0f0"; // Light gray background
-    currentTimeContainer.style.border = "1px solid #ccc"; // Thin border
-    currentTimeContainer.style.boxShadow = "0 0 10px rgba(0, 0, 0, 0.1)"; // Light box shadow
+    currentTimeContainer.style.backgroundColor = "#f0f0f0";
+    currentTimeContainer.style.border = "1px solid #ccc";
+    currentTimeContainer.style.boxShadow = "0 0 10px rgba(0, 0, 0, 0.1)";
 
-    currentTimeContainer.style.padding = "5px 30px"; // Add some padding
-    currentTimeContainer.style.borderRadius = "5px"; // Rounded corners
+    currentTimeContainer.style.padding = "5px 30px";
+    currentTimeContainer.style.borderRadius = "5px";
   } else {
-    // Reset styles for the default location
     currentTimeContainer.style.backgroundColor = "";
     currentTimeContainer.style.border = "";
     currentTimeContainer.style.boxShadow = "";
