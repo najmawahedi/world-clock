@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World Clock</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -9,9 +12,7 @@
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.45/moment-timezone-with-data-1970-2030.min.js"></script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>World Clock</title>
+    <link rel="stylesheet" href="src/style.css" />
     <link rel="stylesheet" href="src/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,47 +24,42 @@
   <body>
     <h1>World Clock</h1>
     <div id="bodyContainer">
-      <select id="cities">
-        <option value="" disabled selected>Select a city</option>
-        <option value="America/New_York">New York</option>
-        <option value="Europe/Berlin">Berlin</option>
-        <option value="Asia/Kabul">Kabul</option>
-        <option value="Asia/Seoul">Seoul</option>
-      </select>
+      <div id="clockContainer">
+        <select id="citySelect">
+          <option value="default" disabled selected>Current Location</option>
 
-      <div id="innerhtml">
-        <div id="firstcity">
-          <h2>
-            New York
-            <div id="newYork" class="date">Agust 21st 2024</div>
-          </h2>
+          <option value="Europe/London">London</option>
+          <option value="Europe/Paris">Paris</option>
+          <option value="Australia/Sydney">Sydney</option>
+          <option value="Europe/Moscow">Moscow</option>
+          <option value="Asia/Dubai">Dubai</option>
+          <option value="Asia/Kabul">Kabul</option>
+          <option value="Asia/Seoul">Seoul</option>
+        </select>
 
+        <div id="currentTime">
+          <div class="cityanddate">
+            <h2 id="displayCity" class="city">Loading...</h2>
+            <div id="displayDate" class="date">Loading...</div>
+          </div>
           <div class="clock">
-            <span id="newYorktime">6:50:01 </span
-            ><span id="amnewYorktime" class="am">PM</span>
+            <span id="displayTime">Loading...</span>
+            <span class="am" id="displayAMPM">Loading...</span>
           </div>
         </div>
-        <div id="secondcity">
-          <h2>
-            Berlin
-            <div id="berlin" class="date">Agust 21st 2024</div>
-          </h2>
 
-          <div class="clock">
-            <span id="berlintime">8:50:10 </span
-            ><span id="amberlintime" class="am">PM</span>
+        <div id="newyork">
+          <div id="NewYorkCity">
+            <h2 id="NewYorkCityName" class="city">New York</h2>
+            <div id="NewYorkDate" class="date">Loading...</div>
+          </div>
+          <div class="CityTime">
+            <span id="NewYorkTime">Loading...</span>
+            <span id="NewYorkAMPM" class="am">Loading...</span>
           </div>
         </div>
-        <div id="thirdcity">
-          <h2>
-            Seoul
-            <div id="seoul" class="date">Agust 21st 2024</div>
-          </h2>
-
-          <div class="clock">
-            <span id="seoultime">10:05:35 </span
-            ><span id="amseoultime" class="am">PM</span>
-          </div>
+        <div class="currentLocation">
+          <small>Back to <a href="\">current location</a> </small>
         </div>
       </div>
     </div>
@@ -73,6 +69,7 @@
       and is open sourced on <a href="#">GitHub</a> and hosted on
       <a href="https://worldclockprojectnajma.netlify.app/">Netlify</a>
     </footer>
+
     <script src="src/index.js"></script>
   </body>
 </html>

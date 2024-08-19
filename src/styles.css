@@ -11,10 +11,11 @@ footer {
   margin: 20px auto;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.658);
-  width: 550px;
-  padding: 40px 0;
+  width: 560px;
+  height: 270px;
+  padding: 40px 0px;
   border-radius: 6px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+  box-shadow: #32325d40 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
@@ -25,11 +26,13 @@ body {
   background-position: center center;
   background-attachment: fixed;
 }
-.clock {
+.clock,
+.CityTime {
   padding-top: 25px;
   font-size: 30px;
   line-height: 1;
   font-weight: bolder;
+  margin-top: 10px;
 }
 h1,
 h2 {
@@ -44,7 +47,7 @@ h2 {
   font-size: 20px;
   padding-bottom: 10px;
 }
-#cities {
+#citySelect {
   font-size: 15px;
   padding: 10px 15px;
   border-radius: 6px;
@@ -58,16 +61,33 @@ h2 {
 h2 {
   text-align: left;
 }
-#firstcity,
-#secondcity,
-#thirdcity {
+#currentTime,
+#newyork {
   display: flex;
   justify-content: space-between;
-  padding: 0 30px;
+  padding: 5px 30px;
 }
 .date {
   text-align: left;
   font-size: 12px;
   opacity: 70%;
   font-weight: normal;
+  margin-top: 2px;
+  padding-bottom: 30px;
+}
+.city {
+  margin-bottom: 0;
+  margin-top: 30px;
+}
+#currentTime {
+  border-bottom: solid rgba(150, 145, 145, 0.445) 1px;
+}
+.currentLocation {
+  text-align: left;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  font-size: 13px;
+}
+#NewYorkDate {
+  padding-bottom: 20px;
 }
