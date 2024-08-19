@@ -1,11 +1,9 @@
-h1,
-footer {
+h1 {
   text-align: center;
-  font-family: "Lobster", sans-serif;
-
-  font-style: normal;
-  opacity: 80%;
+  font-size: 40px;
+  text-shadow: 5px 5px 10px rgba(202, 199, 199, 0.705);
 }
+
 #bodyContainer {
   display: block;
   margin: 20px auto;
@@ -29,7 +27,7 @@ body {
 .clock,
 .CityTime {
   padding-top: 25px;
-  font-size: 30px;
+  font-size: 33px;
   line-height: 1;
   font-weight: bolder;
   margin-top: 10px;
@@ -87,7 +85,14 @@ h2 {
   padding-left: 10px;
   padding-bottom: 10px;
   font-size: 13px;
+  font-family: "Lobster", sans-serif;
 }
 #NewYorkDate {
   padding-bottom: 20px;
+}
+footer {
+  text-align: center;
+  font-family: "Lobster", sans-serif;
+  font-style: normal;
+  opacity: 80%;
 }
