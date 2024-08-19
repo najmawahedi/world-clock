@@ -95,4 +95,6 @@ footer {
   font-family: "Lobster", sans-serif;
   font-style: normal;
   opacity: 80%;
+  font-weight: 100;
+  font-size: small;
 }
